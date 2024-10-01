@@ -20,7 +20,6 @@ Simply run the main() function, and the program will:
 
 Prerequisites
 
-   Rust: Ensure you have Rust installed to compile and run the program.
+    Rust: Ensure you have Rust installed to compile and run the program.
     
-Output
     After execution, check result.txt for the output.
