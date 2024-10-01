@@ -3,22 +3,20 @@ use std::io::{self, Write};
 fn main() {
     let mut diff_buffer = 0.0f64;
     let mut i = 0f64;
-
-    while i < 150000000f64 {
+    let mut file = file();
+    while i < 1000000f64 {
         i += 1f64;
 
-        diff_buffer += diff(sqrt_number(i), sqrt_funktion(i));
-        file_input(
-            i,
-            sqrt_number(i),
-            sqrt_funktion(i),
-            diff(sqrt_number(i), sqrt_funktion(i)),
-            &mut file(),
-        )
-        .expect("erro");
+        let sqrt_num = sqrt_number(i);
+        let sqrt_approx = sqrt_funktion(i);
+        let diffrence = diff(sqrt_num, sqrt_approx);
+
+        diff_buffer += diffrence;
+        file_input(i, sqrt_num, sqrt_approx, diffrence, &mut file)
+            .expect("Failed to open the file");
     }
 
-    writeln!(&mut file(), "Average difference: {}", diff_buffer / i)
+    writeln!(&mut file, "Average difference: {}", diff_buffer / i)
         .expect("Faild to ride in the file in the main");
 }
 
