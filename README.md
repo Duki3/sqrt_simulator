@@ -13,7 +13,7 @@ Usage
 
 Simply run the main() function, and the program will:
 
-    Iterate through numbers from 1 to 150 million.
+    Iterate through numbers from 1 to 1 million.
     Calculate both the real and approximated square root of each number.
     Write the results (number, square roots, and their difference) to result.txt.
     Write the average percentage difference between the two methods at the end of the file.
