@@ -26,8 +26,6 @@ How to Run
 
 To compile and run the program:
 
-bash
-
 cargo run
 
 After execution, check the result.txt file for the output.
