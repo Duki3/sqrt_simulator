@@ -6,8 +6,9 @@ fn main() {
     let mut diff_buffer = 0.0f64;
     let mut i = 0f64;
     let mut file = OpenOptions::new()
-        .append(true)
         .create(true)
+        .truncate(true)
+        .write(true)
         .open("result.txt")
         .expect("Faild to write in the file");
     while i < 1000000f64 {
