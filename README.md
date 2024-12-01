@@ -17,7 +17,8 @@ Simply run the main() function, and the program will:
     Calculate both the real and approximated square root of each number.
     Write the results (number, square roots, and their difference) to result.txt.
     Write the average percentage difference between the two methods at the end of the file.
-
+    If the file already exists, it clears the file and writes to it again.
+    
 Prerequisites
 
     Rust: Ensure you have Rust installed to compile and run the program.
